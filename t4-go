@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	a := 10
+	b := 3
+
+	fmt.Println("Add:", a+b)
+	fmt.Println("Multiply:", a*b)
+	fmt.Println("Equal:", a==b)
+
+	if a > b && b < 5 {
+		fmt.Println("Condition true")
+	}
+
+	a++
+	fmt.Println("Increment:", a)
+}
