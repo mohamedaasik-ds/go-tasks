@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+
+	name := "Mohamed"
+
+	fmt.Println("Length:", len(name))
+
+	fmt.Println("First character:", string(name[0]))
+
+	full := name + "Aasik"
+	fmt.Println("Full name:", full)
+
+	fmt.Println(strings.ToUpper(name))
+}
