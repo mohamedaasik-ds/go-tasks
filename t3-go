@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+
+const AppName = "Employee App"
+
+var version int = 1
+
+type Age int
+type ID = int
+
+type Employee struct {
+	ID   ID
+	Name string
+	Age  Age
+}
+
+func printEmployee(e Employee) {
+	fmt.Println("Employee ID:", e.ID)
+	fmt.Println("Employee Name:", e.Name)
+	fmt.Println("Employee Age:", e.Age)
+}
+
+func main() {
+
+	name := "Alice"
+	var age Age = 30
+	var id ID = 101
+
+	emp := Employee{
+		ID:   id,
+		Name: name,
+		Age:  age,
+	}
+
+	fmt.Println("App:", AppName)
+	fmt.Println("Version:", version)
+
+	printEmployee(emp)
+}
