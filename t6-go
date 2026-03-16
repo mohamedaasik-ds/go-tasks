@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+type Employee struct {
+	ID   int
+	Name string
+	Age  int
+}
+
+func main() {
+
+	employees := make(map[int]Employee)
+
+	employees[1] = Employee{ID: 1, Name: "Alice", Age: 30}
+	employees[2] = Employee{ID: 2, Name: "Bob", Age: 25}
+	employees[3] = Employee{ID: 3, Name: "Charlie", Age: 28}
+
+	fmt.Println("Employee with ID 2:")
+	fmt.Println(employees[2])
+
+	fmt.Println()
+
+	fmt.Println("All Employees:")
+
+	for id, emp := range employees {
+		fmt.Println("ID:", id)
+		fmt.Println("Name:", emp.Name)
+		fmt.Println("Age:", emp.Age)
+		fmt.Println()
+	}
+}
