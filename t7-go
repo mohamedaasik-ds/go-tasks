@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	arr := [5]int{10, 20, 30, 40, 50}
+
+	fmt.Println("Array:", arr)
+
+	fmt.Println("First element:", arr[0])
+
+	arr[1] = 99
+
+	fmt.Println("Updated array:", arr)
+
+	fmt.Println("\nUsing for loop:")
+	for i := 0; i < len(arr); i++ {
+		fmt.Println("Index:", i, "Value:", arr[i])
+	}
+
+	fmt.Println("\nUsing range:")
+	for index, value := range arr {
+		fmt.Println("Index:", index, "Value:", value)
+	}
+}
