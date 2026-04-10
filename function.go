@@ -2,23 +2,68 @@ package main
 
 import "fmt"
 
+/**
+ * No return type
+ */
+func printMessage() {
+	fmt.Println("This function has no return")
+}
+
+/**
+ * Single return value
+ */
+func getSquare(number int) int {
+	return number * number
+}
+
+/**
+ * Multiple return values
+ */
+func getSumAndProduct(a int, b int) (int, int) {
+	sum := a + b
+	product := a * b
+	return sum, product
+}
+
+/**
+ * Named return values
+ */
+func getQuotientAndRemainder(a int, b int) (quotient int, remainder int) {
+	quotient = a / b
+	remainder = a % b
+	return
+}
+
+/**
+ * Function returning boolean
+ */
+func isEven(number int) bool {
+	return number%2 == 0
+}
+
+/**
+ * Function returning string
+ */
+func getGreeting(name string) string {
+	return "Hello " + name
+}
+
 func main() {
-	// variable to test switch
-	number := 2
 
-	// switch checks value of number
-	switch number {
-	case 1:
-		fmt.Println("Number is One")
+	printMessage()
 
-	case 2:
-		fmt.Println("Number is Two")
+	square := getSquare(4)
+	fmt.Println("Square:", square)
 
-	case 3:
-		fmt.Println("Number is Three")
+	sum, product := getSumAndProduct(3, 5)
+	fmt.Println("Sum:", sum, "Product:", product)
 
-	default:
-		// runs if none of the above cases match
-		fmt.Println("Number is something else")
-	}
+	q, r := getQuotientAndRemainder(10, 3)
+	fmt.Println("Quotient:", q, "Remainder:", r)
+
+	evenCheck := isEven(6)
+	fmt.Println("Is Even:", evenCheck)
+
+	greeting := getGreeting("Aasik")
+	fmt.Println(greeting)
 }
